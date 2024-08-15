@@ -1,0 +1,11 @@
+{
+    "name": "gustavo/gestao",
+    "autoload": {
+        "psr-4": {
+            "Gustavo\\Gestao\\": "src/"
+        }
+    },
+    "require": {
+        "coffeecode/router": "^2.0"
+    }
+}
