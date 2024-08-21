@@ -4,7 +4,7 @@ namespace Gustavo\Gestao\Controllers\User;
 
 use Gustavo\Gestao\Helpers\Template\Loader;
 
-class Adicionar
+class Login
 {
     private Loader $template;
 
@@ -15,6 +15,6 @@ class Adicionar
 
     public function execute()
     {
-        $this->template->render("user/adicionar", false);
+        $this->template->render("user/login", false);
     }
 }
