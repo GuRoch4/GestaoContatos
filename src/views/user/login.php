@@ -13,7 +13,7 @@
 
 <body>
     <div class="container-login">
-        <form action="">
+        <form action="" method="post">
             <div class="container-logo">
                 <img src="/public/img/logo.png" alt="">
             </div>
