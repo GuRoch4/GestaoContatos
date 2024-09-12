@@ -16,11 +16,30 @@ abstract class AbstractModel
         $this->database = new Database();
         $this->connect = $this->database->execute();
     }
-//"INSERT INTO users (name, surname, sex) VALUES (:name, :surname, :sex)"
+//"INSERT INTO users (name, email, phone, password) VALUES (:name, :email, :phone, :password)"
     public function create($data){
-        echo "metododo para ciração de uma data";
+
+        try {
+            $column = "";
+            $values = "";
+            foreach ($data as $key => $value) {
+                $column .= "$key,";
+                $values .= ":$key,";
+            }
+            $column =rtrim($column, ",");
+            $values =rtrim($values, ",");
+
+            $table = $this->table;
+            $sql = "INSERT INTO $table ($column) VALUES ($values)";
+
+            $stmt = $this->connect->prepare($sql);
+            if ($stmt->execute($data)){
+                return $this->connect->lastInsertId();
+            }
+            return false;
+        }catch (\Exception $e){
+            return false;
+        }
+
     }
-
-    
-
 }
