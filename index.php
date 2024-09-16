@@ -2,6 +2,9 @@
 
 require_once './vendor/autoload.php';
 
+session_start();
+
+
 use Gustavo\Gestao\Routers\Loader;
 //use Gustavo\Gestao\Models\Users\Users;
 

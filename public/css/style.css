@@ -31,4 +31,26 @@
     justify-content: center;
 }
 
+.container-message{
+    position: fixed;
+    top: 24px;
+    right: 24px;
+}
 
+.danger-message{
+    background-color: red;
+    color: white;
+    box-shadow: 0px 0px 10px 1px darkred;
+}
+
+.success-message{
+    background-color: greenyellow;
+    color: white;
+    box-shadow: 0px 0px 10px 1px greenyellow;
+}
+
+.content-message{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
