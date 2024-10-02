@@ -3,13 +3,15 @@
 namespace Gustavo\Gestao\Helpers\Template;
 
 use Gustavo\Gestao\Helpers\Message\Message;
+
 class Loader
 {
     private Message $message;
-    public function __construct(){
+
+    public function __construct()
+    {
         $this->message = new Message();
     }
-
 
     //C:\xampp\htdocs\src\Helpers\Template/../../view
     //C:\xampp\htdocs\src\views

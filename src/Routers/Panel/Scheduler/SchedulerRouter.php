@@ -4,6 +4,7 @@ namespace Gustavo\Gestao\Routers\Panel\Scheduler;
 
 
 use CoffeeCode\Router\Router;
+use Gustavo\Gestao\Models\Users\UserSession;
 
 class SchedulerRouter
 {
@@ -16,11 +17,12 @@ class SchedulerRouter
 
     public function execute()
     {
-        $this->router->namespace('Gustavo\Gestao\Controllers\Panel\Scheduler');
-        $this->router->get("/panel/scheduler", 'Scheduler:execute');
-        $this->router->get("/panel/scheduler/create", 'Create:execute');
+        $this->router->namespace('Carlos\Scheduler\Controllers\Panel\Scheduler');
 
+        $this->router->get("/panel/scheduler/", 'Scheduler:execute', middleware: UserSession::class);
 
+        $this->router->get("/panel/scheduler/create", 'Create:execute', middleware: UserSession::class);
+
+        $this->router->get("/panel/scheduler/edit", 'Edit:execute', middleware: UserSession::class);
     }
-
 }

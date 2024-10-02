@@ -12,7 +12,8 @@ abstract class AbstractModel
 
     protected $connect;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->database = new Database();
         $this->connect = $this->database->execute();
     }
@@ -23,7 +24,7 @@ abstract class AbstractModel
         try {
             $column = "";
             $values = "";
-            foreach($data as $key => $value) {
+            foreach ($data as $key => $value) {
                 $column .= "$key,";
                 $values .= ":$key,";
             }
@@ -47,11 +48,11 @@ abstract class AbstractModel
     {
         $where = "";
         foreach ($condition as $key => $value) {
-            $where.= "$key = :$key AND ";
+            $where .= "$key = :$key AND ";
         }
         $where = rtrim($where, "AND ");
         $table = $this->table;
-        $sql = "SELECT $column FROM $table WHERE " .$where;
+        $sql = "SELECT $column FROM $table WHERE " . $where;
         $stmt = $this->connect->prepare($sql);
         $stmt->execute($condition);
 
@@ -59,36 +60,30 @@ abstract class AbstractModel
     }
 
     public function findAll($condition = "1", $column = "*")
-    { 
+    {
         $where = "";
         if ($condition != "1") {
             foreach ($condition as $key => $value) {
-                $where.= "$key = :$key AND ";
+                $where .= "$key = :$key AND ";
             }
             $where = rtrim($where, "AND ");
         } else {
             $where = "1";
         }
-      
+
         $table = $this->table;
-        $sql = "SELECT $column FROM $table WHERE " .$where;
+        $sql = "SELECT $column FROM $table WHERE " . $where;
         $stmt = $this->connect->prepare($sql);
         if ($condition != "1") {
             $stmt->execute($condition);
         } else {
             $stmt->execute();
         }
-        
+
         return $stmt->fetchAll();
     }
 
-    public function update()
-    {
+    public function update() {}
 
-    }
-
-    public function delete()
-    {
-        
-    }
+    public function delete() {}
 }

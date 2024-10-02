@@ -4,7 +4,7 @@ namespace Gustavo\Gestao\Controllers\Panel\Scheduler;
 
 use Gustavo\Gestao\Helpers\Template\Loader;
 
-class Create
+class Edit
 {
     public function __construct()
     {
@@ -13,6 +13,6 @@ class Create
 
     public function execute()
     {
-        echo 'Criação tela create.php?';
+        echo "tela de editação";
     }
 }
