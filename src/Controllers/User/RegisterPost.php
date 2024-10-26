@@ -24,7 +24,7 @@ class RegisterPost
     public function execute($data)
     {
 
-        if (!$this->validate->execute($data)){
+        if (!$this->validate->execute($data)) {
             $this->message->setMessageError("Verique os campos e tente novamente");
             header('location: /register');
             return;
@@ -49,7 +49,7 @@ class RegisterPost
         };
 
         $this->message->setMessageSuccess("Registrado com sucesso");
-       
+
         header('location: /login');
         return;
     }

@@ -4,15 +4,16 @@ namespace Gustavo\Gestao\Controllers\Panel\Scheduler;
 
 use Gustavo\Gestao\Helpers\Template\Loader;
 
-class Create
-{
-    public function __construct()
-    {
+Class Create{
+    protected Loader $template;
+
+    public function __construct(){
         $this->template = new Loader();
     }
 
     public function execute()
     {
-        echo 'Criação tela create.php?';
+        $this->template->render('panel/schedulerCreate', true);
     }
+
 }

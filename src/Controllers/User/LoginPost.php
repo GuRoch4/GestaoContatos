@@ -2,8 +2,8 @@
 
 namespace Gustavo\Gestao\Controllers\User;
 
-use Gustavo\Gestao\Helpers\Message\Message;
 use Gustavo\Gestao\Models\Users\Users;
+use Gustavo\Gestao\Helpers\Message\Message;
 use Gustavo\Gestao\Models\Users\UserSession;
 
 class LoginPost
@@ -48,13 +48,13 @@ class LoginPost
             return;
         }
 
-        if (!password_verify($data['password'], $user->password)) {
+        if (!password_verify($data['password'], $user['password'])) {
             $this->message->setMessageError("Usuario ou senha invalidos");
             header('location: /login');
             return;
         }
 
-        $this->userSession->create($user->id, $user->name, $user->email);
+        $this->userSession->create($user['id'], $user['name'], $user['email']);
 
         header('location: /panel/scheduler/');
     }

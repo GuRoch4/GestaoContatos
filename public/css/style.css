@@ -1,11 +1,12 @@
-.container-login{
+.container-login {
     background-color: gainsboro;
     display: flex;
     height: 100vh;
     justify-content: center;
     align-items: center;
 }
-.container-login form{
+
+.container-login form {
     background-color: white;
     width: 40%;
     padding: 1%;
@@ -13,44 +14,69 @@
     box-shadow: 0px 0px 20px 1px black;
 }
 
-.container-action{
+.container-action {
     text-align: center;
     margin-top: 10px;
 }
 
-.container-logo{
+.container-logo {
     display: flex;
     justify-content: center;
 }
-.container-logo img{
+
+.container-logo img {
     height: 100px;
 }
 
-.conteiner-button{
+.conteiner-button {
     display: flex;
     justify-content: center;
 }
 
-.container-message{
+.container-message {
     position: fixed;
     top: 24px;
     right: 24px;
 }
 
-.danger-message{
+.danger-message {
     background-color: red;
     color: white;
     box-shadow: 0px 0px 10px 1px darkred;
 }
 
-.success-message{
+.success-message {
     background-color: greenyellow;
     color: white;
     box-shadow: 0px 0px 10px 1px greenyellow;
 }
 
-.content-message{
+.content-message {
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
+}
+
+.hidden-row {
+    display: none;
+}
+
+/* Configuração básica do body para ocupar a altura total da tela e usar flexbox */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Garante que o body ocupe no mínimo a altura da viewport */
+    margin: 0;
+    /* Remove margens padrão */
+}
+
+.container {
+    flex: 1;
+    /* Faz o conteúdo expandir para ocupar o espaço disponível */
+}
+
+.btn-link {
+    color: #c90000;
+
 }

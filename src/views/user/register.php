@@ -6,38 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/public/css/style.css" >
+    <link rel="stylesheet" href="/public/css/style.css">
 
     <title>Register</title>
 </head>
 
 <body>
-<div class="container-login">
-    <form action="/register/save" method="post">
-        <div class="container-logo">
-            <img src="/public/img/logo.png" alt="">
-        </div>
-        <div class="mb-3">
-            <label for="name" class="form-label">Nome</label>
-            <input name="name" required type="text" class="form-control" id="name" placeholder="Nome">
-        </div>
-        <div class="mb-3">
-            <label for="phone" class="form-label">Telefone</label>
-            <input name="phone" required type="text" class="form-control" id="phone" placeholder="(00) 0.0000-0000">
-        </div>
-        <div class="mb-3">
-            <label for="email" class="form-label">Email address</label>
-            <input name="email" required type="email" class="form-control" id="email" placeholder="nome@examplo.com">
-        </div>
-        <div class="mb-3">
-            <label for="password" class="form-label">Password</label>
-            <input name="password" required type="password" class="form-control" id="password" placeholder="****">
-        </div>
-        <button type="submit" class="btn btn-primary">Cadastrar</button>
-        <div class="container-action">
-            <a href="/login">Login!</a>
-        </div>
-    </form>
-</div>
+    <div class="container-login">
+        <form action="/register/save" method="post">
+            <div class="container-logo">
+                <img src="/public/img/logo.png" alt="">
+            </div>
+            <div class="mb-3">
+                <label for="name" class="form-label">Nome</label>
+                <input name="name" required type="text" class="form-control" id="name" placeholder="Nome">
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Telefone</label>
+                <input name="phone" required type="text" class="form-control" id="phone" placeholder="(00) 0.0000-0000">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input name="email" required type="email" class="form-control" id="email" placeholder="nome@examplo.com">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input name="password" required type="password" class="form-control" id="password" placeholder="****">
+            </div>
+            <button type="submit" class="btn btn-dark">Cadastrar</button>
+            <div class="container-action">
+                <span>Possui conta?</span>
+                <a class="nav-link text-danger" href="/login">Clique aqui!</a>
+            </div>
+        </form>
+    </div>
 </body>
+
 </html>

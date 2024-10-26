@@ -10,15 +10,13 @@ use Gustavo\Gestao\Routers\Loader;
 
 //$user = new Users();
 
-//$data =[
-//    'name' => "Gustavo",
-//    'email' => "gu@gmail.com",
-//    'phone' => "3599702",
-//    'password' => password_hash('1234', PASSWORD_DEFAULT)
+//$condition = [
+//    "name"=>"dwa"
 //];
 
-//$user->create($data);
+//$data = $user->findOne($condition, "name, email");
 
+//var_dump($data);
 
 $loader = new Loader();
 $loader->execute();

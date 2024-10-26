@@ -6,8 +6,7 @@ use CoffeeCode\Router\Router;
 
 class UserSession
 {
-    public function handle(Router $router)
-    {
+    public function handle(Router $router) {
         if ($this->getSession() == null) {
             $router->redirect('/login');
         }

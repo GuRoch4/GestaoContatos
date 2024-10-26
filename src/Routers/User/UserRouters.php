@@ -8,19 +8,13 @@ use Gustavo\Gestao\Controllers\User\Register;
 use Gustavo\Gestao\Controllers\User\RegisterPost;
 use Gustavo\Gestao\Controllers\User\LoginPost;
 
-
 class UserRouters
 {
     private Router $router;
-
     private Login $login;
-
     private Register $register;
-
     private RegisterPost $registerPost;
-
     private LoginPost $loginPost;
-
     public function __construct(Router $router)
     {
         $this->router = $router;
@@ -39,6 +33,7 @@ class UserRouters
         $this->router->post("/login/validate", function ($data) {
             $this->loginPost->execute($data);
         });
+
 
         $this->router->get("/register", function () {
             $this->register->execute();
