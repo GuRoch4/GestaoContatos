@@ -1,4 +1,14 @@
  <!-- Tabela de Contatos -->
+ <!--div class="container-search">
+     <form action="/panel/scheduler/search" method="GET">
+         <input value="<?= $search ?>" name="nameFilter" type="text">
+         <button>Buscar</button>
+     </form>
+     <?php if ($search != "") { ?>
+         <a href="/panel/scheduler">Limpar</a>
+     <?php } ?>
+ </div -->
+
  <div class="container py-5">
      <h2 class="text-center">Lista de Contatos</h2>
      <table class="table table-striped table-hover">

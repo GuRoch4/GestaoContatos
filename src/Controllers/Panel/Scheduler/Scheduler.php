@@ -17,12 +17,21 @@ class Scheduler
         $this->schedulers = new Schedulers();
     }
 
-    public function execute()
+    public function execute($data)
     {
-        $schedulers = $this->schedulers->findAll();
+        $search = "";
+        if (isset($_GET['nameFilter'])) {
+            $search = $_GET['nameFilter'];
+            $schedulers = $this->schedulers->findAll([
+                "name_scheduler" => $_GET['nameFilter']
+            ]);
+        } else {
+            $schedulers = $this->schedulers->findAll();
+        }
 
         $this->template->render('panel/scheduler', true, [
-            "schedulers" => $schedulers
+            "schedulers" => $schedulers,
+            "search" => $search
         ]);
     }
 }
